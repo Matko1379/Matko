@@ -32,7 +32,7 @@ header nav {
 }
 
 nav a {
-    font-size: 6px;
+    font-size: 16px;
     color: black;
     text-decoration: none;
     text-transform: capitalize;
@@ -184,7 +184,7 @@ nav a:hover {
 
     /* navigation */
     nav a {
-        font-sie: 6px;
+        font-sie: 15px;
         display: block;
         padding: 0px 10px;
         margin-top: 10px;
