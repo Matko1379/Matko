@@ -1,0 +1,263 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: Roboto, Arial;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    padding: 0 8%;
+    overflow: hidden;
+}
+
+header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-top: 5%;
+}
+
+header .logo {
+    width: 60px;
+    cursor: pointer;
+}
+
+header nav {
+    flex: 1;
+    text-align: right;
+}
+
+nav a {
+    font-size: 16px;
+    color: black;
+    text-decoration: none;
+    text-transform: capitalize;
+    border-left: 2px solid rgb(222, 39, 39);
+    padding: 0px 20px;
+}
+
+nav a.others {
+    padding-right: 0;
+}
+
+nav a.game-controller {
+    border-left: none;
+}
+
+nav a:hover {
+    color: rgb(222, 39, 39);
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 100px 0px;
+}
+
+.col-1 {
+    flex-basis: 40%;
+    position: relative;
+    margin-left: 60px;
+}
+
+.col-1::after {
+    content: "";
+    width: 12px;
+    height: 90%;
+    background: linear-gradient(rgb(222, 39, 39), rgb(245, 132, 132));
+    position: absolute;
+    top: 50px;
+    left: -40px;
+}
+
+.col-1 h2 {
+    font-size: 50px;
+}
+
+.col-1 h3 {
+    font-size: 30px;
+    font-weight: 100;
+}
+
+.col-1 p {
+    font-size: 16px;
+    font-weight: 100;
+}
+
+.col-1 h4 {
+    font-size: 20px;
+}
+
+.col-1 button {
+    font-size: 20px;
+    padding: 10px;
+    width: 150px;
+    color: white;
+    background: rgb(222, 39, 39);
+    border: none;
+    border-radius: 5px 20px 20px 5px;
+    outline: none;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.col-1 button:hover {
+    width: 170px;
+}
+
+.col-2 {
+    flex-basis: 60%;
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-right: 100px;
+}
+
+.col-2 .controller {
+    width: 90%;
+}
+
+.col-2 .add {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 100px;
+    color: white;
+    cursor: pointer;
+    transition: 0.4s ease-in-out;
+}
+
+.col-2 .add-btn img {
+    width: 40px;
+    padding-bottom: 14px;
+}
+
+.col-2 .add:hover {
+    transform: scale(1.1);
+}
+
+.col-2 .color-box {
+    width: 150%;
+    height: 100%;
+    background: linear-gradient(to right, rgb(222, 39, 39), rgba(241, 144, 47, 0.5));
+    position: absolute;
+    z-index: -1;
+    transform: translateX(250px);
+    border-radius: 20% 40%;
+}
+
+.social-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px 0px;
+}
+
+.social-link img {
+    height: 15px;
+    object-fit: cover;
+    margin-left: 50px;
+    cursor: pointer;
+    margin-top: 50px;
+}
+
+
+@media only screen and (max-width :500px) {
+
+    /* col-2 */
+    .col-2 .add-btn img {
+        width: 10px;
+    }
+
+    .col-2 .add .text {
+        font-size: 12px;
+    }
+}
+
+@media only screen and (max-width :800px) {
+
+    /* navigation */
+    nav a {
+        display: block;
+        padding: 0px 10px;
+        margin-top: 10px;
+        border-left: none;
+        border-right: 2px solid rgb(222, 39, 39);
+    }
+
+    nav a.others {
+        padding-right: 10px;
+    }
+
+    /* content */
+    .row {
+        flex-direction: column-reverse;
+    }
+
+    /* col-2 */
+    .col-2 {
+        margin-right: 0px;
+        margin-bottom: 50px;
+    }
+
+    .col-2 .controller {
+        width: 80%;
+    }
+
+    .col-2 .add-btn img {
+        width: 30px;
+    }
+
+    .col-2 .color-box {
+        width: 150%;
+        height: 100%;
+        background: linear-gradient(to right, rgb(222, 39, 39), rgba(241, 144, 47, 0.5));
+        position: absolute;
+        z-index: -1;
+        transform: translateX(120px);
+        border-radius: 20% 40%;
+    }
+
+    /* col-1 */
+    .col-1 h2 {
+        font-size: 40px;
+    }
+
+    .col-1 h3 {
+        font-size: 24px;
+    }
+
+    .col-1 p {
+        font-size: 12px;
+    }
+
+    .col-1 h4 {
+        font-size: 18px;
+    }
+
+    .col-1 button {
+        font-size: 18px;
+        padding: 8px;
+        width: 150px;
+    }
+}
+
+@media only screen and (max-width :1100px) {
+
+    /* col-2 */
+    .col-2 .color-box {
+        width: 150%;
+        height: 120%;
+        background: linear-gradient(to right, rgb(222, 39, 39), rgba(241, 144, 47, 0.5));
+        position: absolute;
+        z-index: -1;
+        transform: translateX(50px);
+        border-radius: 20% 40%;
+    }
+}
